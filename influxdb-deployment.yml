@@ -25,6 +25,5 @@ spec:
           mountPath: /var/lib/influxdb
       volumes:
       - name: influxdb-data
-        gcePersistentDisk:
-          pdName: influxdb-1
-          fsType: ext4
+        persistentVolumeClaim:
+          claimName: influxdb-data-claim
